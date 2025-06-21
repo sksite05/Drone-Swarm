@@ -1,4 +1,4 @@
-# Drone Synchronization Project
+# Drone Swarming Project
 
 **Ongoing project to synchronize multiple drones autonomously using Python, Mission Planner, Pixhawk, and Raspberry Pi.**
 
