@@ -18,6 +18,7 @@
 - Test flights and calibration completed.
 - completed autonomous waypoint navigation using mission planner of individual drones.
 - Initial synchronization of two drones in progress.
+- done the gazebo simulation of iris drones performing various swarms like square swarm, triangle swarm, check the simulation folder.
 
 ## How to Use
 1. Clone the repository:
