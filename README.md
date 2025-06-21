@@ -16,6 +16,7 @@
 
 ## Current Progress
 - Test flights and calibration completed.
+- completed autonomous waypoint navigation using mission planner of individual drones.
 - Initial synchronization of two drones in progress.
 
 ## How to Use
