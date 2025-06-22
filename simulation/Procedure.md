@@ -122,6 +122,7 @@ The multi-SITL script from the video did not work for me. Instead, I launched SI
    ```bash
    roslaunch iq_sim multi_drone.launch```
 2. Start SITL for each drone:
+
 *Drone 1 SITL:
    ```bash
    sim_vehicle.py -v ArduCopter -f gazebo-drone1 -I0 --sysid=1 --out=udp:127.0.0.1:14551 --out=udp:127.0.0.1:14555
