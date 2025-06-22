@@ -182,17 +182,17 @@ The multi-SITL script from the video did not work for me. Instead, I launched SI
 1. Launch the multi-drone simulation:
    ```bash
    roslaunch iq_sim multi_drone.launch
- ``
+ 
 2. Start SITL for each drone:
-*Drone 1 SITL:
+  Drone 1 SITL:
    ```bash
    sim_vehicle.py -v ArduCopter -f gazebo-drone1 -I0 --sysid=1 --out=udp:127.0.0.1:14551 --out=udp:127.0.0.1:14555
-```
-*Drone 2 SITL:
+   ```
+  Drone 2 SITL:
    ```bash
    sim_vehicle.py -v ArduCopter -f gazebo-drone1 -I1 --sysid=1 --out=udp:127.0.0.1:14561 --out=udp:127.0.0.1:14565
 ```
-*Drone 3 SITL:
+  Drone 3 SITL:
    ```bash
    sim_vehicle.py -v ArduCopter -f gazebo-drone1 -I2 --sysid=1 --out=udp:127.0.0.1:14571 --out=udp:127.0.0.1:14575
 ```
