@@ -71,3 +71,59 @@ mode guided
 arm throttle
 takeoff 5
 mode land
+
+
+# MULTIPLE DRONE SWARM
+
+## Step-by-Step Procedure
+
+### 1. Install MAVROS
+Run the following command to install MAVROS:
+```bash
+sudo apt-get install ros-noetic-mavros ros-noetic-mavros-extras
+### 2. Follow Video Instructions
+Watch Video 21 only up to 4:16. No need to do the QGC part for swarming. After that, move on to the next step:
+[Watch Video 21](https://youtu.be/UWsya46ZG4M?si=FxfZhbX2qkvJiC84)
+### 3. Error Point
+Ensure to launch the ROS Gazebo model using Point 16 from the previous "DRONE SWARM" page before starting SITL.
+### 4. Continue with Video 22
+Use Video 22 for additional guidance:
+[Watch Video 22](https://youtu.be/kcCL0w4NbIc?si=_V7Vl--2XGDBHoHx)
+### 5. Reference GitHub Repository
+Refer to the following GitHub repository for multi-MAVROS drones:
+[Multi-MAVROS Drones](https://github.com/Intelligent-Quads/iq_tutorials/blob/master/docs/multi_mavros_drones.md)
+### 6. Learn IQ_GNC Functions
+In this tutorial, you'll learn to use the iq_gnc functions for controlling multiple drones on the same ROS network.
+### 7. Review GNC Tutorial
+Go through the gnc_tutorial.md file in the repository mentioned above and copy the repo before following the video.
+### 8. Modify MAVROS Configuration
+Adjust the apm.launch file based on your setup:
+*For simulation, use UDP:
+Use `<arg name="fcu_url" default="/dev/ttyACM0:57600" />` for simulation.
+*For hardware, change to TCP if required.
+### 9. Individual SITL Launch
+The multi-SITL script from the video did not work for me. Instead, I launched SITL individually in separate terminals. You may try the script to see if it works for you.
+
+
+## Final Steps for Square Swarm
+
+1. Launch the multi-drone simulation:
+   ```bash
+   roslaunch iq_sim multi_drone.launch
+2. Start SITL for each drone:
+*Drone 1 SITL:
+   ```bash
+   sim_vehicle.py -v ArduCopter -f gazebo-drone1 -I0 --sysid=1 --out=udp:127.0.0.1:14551 --out=udp:127.0.0.1:14555
+*Drone 2 SITL:
+   ```bash
+   sim_vehicle.py -v ArduCopter -f gazebo-drone1 -I1 --sysid=1 --out=udp:127.0.0.1:14561 --out=udp:127.0.0.1:14565
+*Drone 3 SITL:
+   ```bash
+   sim_vehicle.py -v ArduCopter -f gazebo-drone1 -I2 --sysid=1 --out=udp:127.0.0.1:14571 --out=udp:127.0.0.1:14575
+3. Launch the APM models:
+   ```bash
+   roslaunch iq_sim multi_apm.launch
+4. Execute the square formation swarm:
+   ```bash
+   roslaunch iq_gnc multi_square.launch
+
