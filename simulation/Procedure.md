@@ -120,9 +120,7 @@ The multi-SITL script from the video did not work for me. Instead, I launched SI
  
 1. Launch the multi-drone simulation:
    ```bash
-   roslaunch iq_sim multi_drone.launch
- ```
-```
+   roslaunch iq_sim multi_drone.launch```
 2. Start SITL for each drone:
 *Drone 1 SITL:
    ```bash
