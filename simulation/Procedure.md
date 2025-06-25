@@ -76,9 +76,6 @@ mode land
 # MULTIPLE DRONE SWARM
 
 ## Step-by-Step Procedure
-# MULTIPLE DRONE SWARM
-
-## Step-by-Step Procedure
 
 1. **Install MAVROS**
 Run the following command to install MAVROS:
