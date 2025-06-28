@@ -206,5 +206,6 @@ The multi-SITL script from the video did not work for me. Instead, I launched SI
    cd catkin_ws/
    catkin build iq_gnc
    catkin build iq_sim
+6. and also update the new script in CMake.txt file under executables.
 
 HAVE FUN :)
