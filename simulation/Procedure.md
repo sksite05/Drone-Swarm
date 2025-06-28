@@ -201,4 +201,10 @@ The multi-SITL script from the video did not work for me. Instead, I launched SI
 4. Execute the square formation swarm:
    ```bash
    roslaunch iq_gnc multi_square.launch
+5. Remember to do catkin build after any change in iq gnc or any folder
+   ```bash
+   cd catkin_ws/
+   catkin build iq_gnc
+   catkin build iq_sim
 
+HAVE FUN :)
