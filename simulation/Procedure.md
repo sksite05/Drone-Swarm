@@ -189,11 +189,11 @@ The multi-SITL script from the video did not work for me. Instead, I launched SI
    ```
   Drone 2 SITL:
    ```bash
-   sim_vehicle.py -v ArduCopter -f gazebo-drone1 -I1 --sysid=1 --out=udp:127.0.0.1:14561 --out=udp:127.0.0.1:14565
+   sim_vehicle.py -v ArduCopter -f gazebo-drone1 -I1 --sysid=2 --out=udp:127.0.0.1:14561 --out=udp:127.0.0.1:14565
    ```
   Drone 3 SITL:
    ```bash
-   sim_vehicle.py -v ArduCopter -f gazebo-drone1 -I2 --sysid=1 --out=udp:127.0.0.1:14571 --out=udp:127.0.0.1:14575
+   sim_vehicle.py -v ArduCopter -f gazebo-drone1 -I2 --sysid=3 --out=udp:127.0.0.1:14571 --out=udp:127.0.0.1:14575
 ```
 3. Launch the APM models:
    ```bash
