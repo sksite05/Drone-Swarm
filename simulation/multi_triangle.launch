@@ -1,0 +1,28 @@
+<launch>
+    <!-- Drone 1 Configuration -->
+    <group>
+        <node pkg="iq_gnc" type="triangle" name="triangle1" output="screen" ns="/drone1">
+            <param name="namespace" value="/drone1"/>
+            <param name="use_sim_time" value="true"/>
+            <param name="drone_id" value="1"/>
+        </node>
+    </group>
+
+    <!-- Drone 2 Configuration -->
+    <group>
+        <node pkg="iq_gnc" type="triangle" name="triangle2" output="screen" ns="/drone2">
+            <param name="namespace" value="/drone2"/>
+            <param name="use_sim_time" value="true"/>
+            <param name="drone_id" value="2"/>
+        </node>
+    </group>
+
+    <!-- Drone 3 Configuration -->
+    <group>
+        <node pkg="iq_gnc" type="triangle" name="triangle3" output="screen" ns="/drone3">
+            <param name="namespace" value="/drone3"/>
+            <param name="use_sim_time" value="true"/>
+            <param name="drone_id" value="3"/>
+        </node>
+    </group>
+</launch>
